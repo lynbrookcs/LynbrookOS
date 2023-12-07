@@ -161,7 +161,6 @@ void readln(){
 	char* verr = "version\0";
 	char* cls = "cls\0";
 	char* echo = "echo\0";
-	char* name_c = "name\0";
 	for(int i = 0; i < MAX_COLS; i++){
 		c = vidmem[offset];
 		offset+=2; 
@@ -169,13 +168,10 @@ void readln(){
 		if(message_buffer[i] == ' '){
 			message_buffer[i] = '\0';
 			if(str_eq(message_buffer,  verr)){
-				print("SimiOS, Version 0.0.1.\n");
+				print("LynbrookOS, Version 0.0.1.\n");
 			} 
 			else if(str_eq(message_buffer, cls)){
 				clear_screen();
-			}
-			else if(str_eq(message_buffer, name_c)){
-				print("My name is Didus.\n");
 			}
 			else if(str_eq(message_buffer, echo)){
 				for(int j = i; j < MAX_COLS; j++){
