@@ -1,6 +1,10 @@
 #include "util.h"
 #include "../drivers/screen.h"
 
+
+// generic comment 
+
+
 void memory_set(char* dest, char c, int no_bytes){
 	for(int i = 0; i < no_bytes; i++){
 		*(dest + i) = c; 
